@@ -1,6 +1,6 @@
 # Core dependencies
-Flask==2.1.1
-requests==2.27.1
+Flask==2.2.5
+requests==2.32.2
 
 # Testing dependencies
 pytest==7.1.1
@@ -8,7 +8,7 @@ pytest-cov==3.0.0
 
 # Linting and formatting
 pylint==2.14.0
-black==22.3.0
+black==24.3.0
 
 # Optional
 sphinx==4.5.0
