@@ -1,3 +1,6 @@
+def test_sample():
+    assert 1 + 1 == 2
+
 import pandas as pd
 from src.models.model_inference import load_model, predict
 
