@@ -20,14 +20,21 @@ jobs:
         git config --global user.name "rfc391"
         git config --global user.email "robshubert96@gmail.com"
 
-   - name: Update Wiki
-  run: |
-    mkdir -p ./wiki
-    cp -r docs/* ./wiki
-    cd ./wiki
-    git init
-    git remote add origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/rfc391/HyCAN.wiki
-    git add .
-    git commit -m "Auto-update Wiki"
-    git branch -M main
-    git push origin main --force
+    - name: Debug Git Setup
+      run: |
+        echo "Checking working directory and files"
+        ls -la
+        echo "Checking docs folder contents"
+        ls -la docs
+
+    - name: Update Wiki
+      run: |
+        mkdir -p ./wiki
+        cp -r docs/* ./wiki
+        cd ./wiki
+        git init
+        git remote add origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/rfc391/HyCAN.wiki.git
+        git add .
+        git commit -m "Auto-update Wiki"
+        git branch -M master
+        git push origin master --force
