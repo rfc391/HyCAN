@@ -17,7 +17,7 @@ jobs:
 
     - name: Set up Git User
       run: |
-        git config --global rfc391 "github-actions[bot]"
+        git config --global https://github.com/rfc391 "github-actions[bot]"
         git config --global robshubert96@gmail.com "github-actions[bot]@users.noreply.github.com"
 
     - name: Update Wiki
