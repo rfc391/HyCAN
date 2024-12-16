@@ -17,8 +17,8 @@ jobs:
 
     - name: Set up Git User
       run: |
-        git config --global https://github.com/rfc391 "github-actions[bot]"
-        git config --global robshubert96@gmail.com "github-actions[bot]@users.noreply.github.com"
+       git config --global user.name "rfc391"
+       git config --global user.email "robshubert96@gmail.com"
 
     - name: Update Wiki
       run: |
