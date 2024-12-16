@@ -1,3 +1,4 @@
-#### Black Configuration:
+```toml
 [tool.black]
 line-length = 88
+```
