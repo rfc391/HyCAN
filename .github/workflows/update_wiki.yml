@@ -36,5 +36,5 @@ jobs:
         git remote add origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/rfc391/HyCAN.wiki.git
         git add .
         git commit -m "Auto-update Wiki"
-        git branch -M home
-        git push origin home --force
+        git branch -M wiki
+        git push origin wiki --force
