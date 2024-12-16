@@ -38,6 +38,7 @@ Analyze example data:
 ```bash
 python src/utils.py --data data/example_data.csv
 ```
+
 ---
 
 ## Project Structure
@@ -72,3 +73,22 @@ We welcome contributions! Please follow these steps:
 3. Commit your changes: `git commit -m "Description of changes"`.
 4. Push to the branch: `git push origin feature-name`.
 5. Submit a pull request.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Acknowledgements
+
+Special thanks to our research collaborators and supporters.
+
+---
+
+**Footer**
+
+---
+This project is part of the HyCAN Initiative, aimed at advancing hydrogen-based technologies. For more details, visit our [official website](https://hycan.org).
