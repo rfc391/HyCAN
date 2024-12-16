@@ -28,9 +28,8 @@ jobs:
       # Step 4: Build and Push Docker Image
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
-        with:
-          context: .
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/hycan:latest
+         context: .
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/robs391/hycan:latest
           push: ${{ github.event_name != 'pull_request' }}
-          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/hycan:cache
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/robs391/hycan:cache
           cache-to: type=inline
