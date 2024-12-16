@@ -18,7 +18,7 @@ jobs:
     - name: Set up Git User
       run: |
         git config --global user.name "rfc391"
-        git config --global user.email "robshubert96@gmail.com"
+        git config --global user.email "rfc391@users.noreply.github.com"
 
     - name: Debug Git Setup
       run: |
