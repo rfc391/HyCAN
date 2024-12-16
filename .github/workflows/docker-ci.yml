@@ -23,10 +23,11 @@ jobs:
           driver: cloud
           endpoint: "robs391/hycan"
       - name: Build and push
-      uses: docker/build-push-action@v5
+     uses: docker/build-push-action@v5
         with:
           context: .
-          tags: ${{ secrets.DOCKER_USERNAME }}/IMAGE:latest
+          platforms: linux/amd64,linux/arm64   # Multi-platform support
+          tags: ${{ secrets.DOCKER_USERNAME }}/hycan-app:latest
           push: ${{ github.event_name != 'pull_request' }}
-          cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/IMAGE:cache
+          cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/hycan-app:cache
           cache-to: type=inline
