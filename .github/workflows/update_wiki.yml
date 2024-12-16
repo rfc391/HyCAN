@@ -17,8 +17,8 @@ jobs:
 
     - name: Set up Git User
       run: |
-       git config --global user.name "rfc391"
-       git config --global user.email "robshubert96@gmail.com"
+        git config --global user.name "rfc391"
+        git config --global user.email "robshubert96@gmail.com"
 
     - name: Update Wiki
       run: |
@@ -29,4 +29,5 @@ jobs:
         git remote add origin https://github.com/rfc391/HyCAN.wiki.git
         git add .
         git commit -m "Auto-update Wiki"
-        git push origin master --force
+        git branch -M main
+        git push origin main --force
