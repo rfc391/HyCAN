@@ -69,6 +69,7 @@ HyCAN/
 ├── docs/                   # Documentation files
 │   ├── index.md            # Main documentation
 │   ├── images/             # Supporting images
+│   ├── _Sidebar.md         # Custom wiki sidebar
 ├── src/                    # Source code
 │   ├── main.py             # Main application script
 │   ├── utils.py            # Utility scripts
