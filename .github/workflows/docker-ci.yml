@@ -28,19 +28,3 @@ jobs:
 
       # Step 4: Build and Push Docker Image
       - name: Build and Push Docker Image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/hycan:latest
-          push: ${{ github.event_name != 'pull_request' }}
-          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/hycan:cache
-          cache-to: type=inline
-
-      # Step 5: Notify Slack
-      - name: Notify Slack
-        uses: rtCamp/action-slack-notify@v2
-        with:
-          webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
-          message: "Build and Push Completed for branch: ${{ github.ref_name }}"
-          username: "GitHub Actions Bot"
-          icon_emoji: ":rocket:"
