@@ -1,0 +1,32 @@
+name: Update Wiki
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-wiki:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Set up Git User
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Update Wiki
+      run: |
+        mkdir -p ./wiki
+        cp -r docs/* ./wiki
+        cd ./wiki
+        git init
+        git remote add origin https://github.com/rfc391/HyCAN.wiki.git
+        git add .
+        git commit -m "Auto-update Wiki"
+        git push origin master --force
