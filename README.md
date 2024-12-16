@@ -51,6 +51,11 @@ Run the main application:
 python src/main.py
 ```
 
+Run the dashboard:
+```bash
+python src/dashboard.py
+```
+
 Analyze example data:
 ```bash
 python src/utils.py --data data/example_data.csv
@@ -74,6 +79,7 @@ HyCAN/
 │   ├── main.py             # Main application script
 │   ├── utils.py            # Utility scripts
 │   ├── requirements.txt    # Python dependencies
+│   ├── dashboard.py        # GUI dashboard script
 ├── tests/                  # Unit and integration tests
 │   ├── test_main.py        # Tests for main.py
 │   ├── test_utils.py       # Tests for utils.py
@@ -102,7 +108,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-Special thanks to our research collaborators and supporters.
+Special thanks to our research collaborators, industry partners, and supporters who have contributed to the development of HyCAN. Your support enables innovation in clean energy solutions.
 
 ---
 
