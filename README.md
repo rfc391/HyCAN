@@ -122,4 +122,4 @@ Special thanks to our research collaborators, industry partners, and supporters 
 **Footer**
 
 ---
-This project is part of the HyCAN Initiative, aimed at advancing hydrogen-based technologies. For more details, visit our [official website](https://hycan.org).
+This project is part of the HyCAN Initiative, aimed at advancing hydrogen-based technologies. 
