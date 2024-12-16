@@ -71,24 +71,27 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ```
 HyCAN/
-│
-├── README.md               # Project overview
-├── LICENSE                 # Licensing information
-├── .gitignore              # Git ignored files
-├── docs/                   # Documentation files
-│   ├── index.md            # Main documentation
-│   ├── images/             # Supporting images
-│   ├── _Sidebar.md         # Custom wiki sidebar
-├── src/                    # Source code
-│   ├── main.py             # Main application script
-│   ├── utils.py            # Utility scripts
-│   ├── requirements.txt    # Python dependencies
-│   ├── dashboard.py        # GUI dashboard script
-├── tests/                  # Unit and integration tests
-│   ├── test_main.py        # Tests for main.py
-│   ├── test_utils.py       # Tests for utils.py
-└── data/                   # Example datasets
-    └── example_data.csv    # Sample data file
+├── .github/
+│   ├── dependabot.yml
+│   └── workflows/
+│       └── ci.yml
+├── .env
+├── .gitignore
+├── .pylintrc
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── Dockerfile
+├── README.md
+├── requirements.txt
+├── pyproject.toml
+├── src/               # Application source code
+│   ├── __init__.py
+│   ├── app.py         # Main application file
+│   └── modules/       # Additional modules or utilities
+├── tests/             # Test files
+│   ├── __init__.py
+│   └── test_example.py
+└── LICENSE
 ```
 
 ---
