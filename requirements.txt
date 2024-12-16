@@ -3,7 +3,7 @@ Flask==2.1.1
 requests==2.27.1
 
 # Testing dependencies
-pytest==7.1.1
+pytest==8.3.4
 pytest-cov==3.0.0
 
 # Linting and formatting
