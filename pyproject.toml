@@ -1,5 +1,3 @@
 #### Black Configuration:
-Add the following to `pyproject.toml`:
-```toml
 [tool.black]
 line-length = 88
