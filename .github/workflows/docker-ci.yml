@@ -26,7 +26,6 @@ jobs:
      uses: docker/build-push-action@v5
         with:
           context: .
-          platforms: linux/amd64,linux/arm64   # Multi-platform support
           tags: ${{ secrets.DOCKER_USERNAME }}/hycan-app:latest
           push: ${{ github.event_name != 'pull_request' }}
           cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/hycan-app:cache
