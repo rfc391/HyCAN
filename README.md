@@ -46,20 +46,24 @@ The project provides an open-source framework for researchers, developers, and s
 
 ## Usage
 
-Run the main application:
-```bash
-python src/main.py
-```
+## Setup Instructions
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/rfc391/HyCAN.git
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the application:
+   ```bash
+   python app.py
+   ```
 
-Run the dashboard:
-```bash
-python src/dashboard.py
-```
+---
 
-Analyze example data:
-```bash
-python src/utils.py --data data/example_data.csv
-```
+## Contribution Guidelines
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
