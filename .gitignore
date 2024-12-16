@@ -1,7 +1,9 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
-*.pyo
+*.pyc
+.env
+.DS_Store
+.vscode/
 
 # Packages
 *.egg
@@ -15,7 +17,3 @@ venv/
 # Editor directories
 .vscode/
 .idea/
-
-```env
-DATABASE_URL=your_database_url
-SECRET_KEY=your_secret_key
