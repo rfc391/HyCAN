@@ -33,7 +33,7 @@ jobs:
         cp -r docs/* ./wiki
         cd ./wiki
         git init
-        git remote add origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/rfc391/HyCAN.wiki.git
+        git remote add origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/rfc391/HyCAN/wiki.git
         git add .
         git commit -m "Auto-update Wiki"
         git branch -M master
