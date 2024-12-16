@@ -11,4 +11,4 @@ pylint==2.14.0
 black==24.3.0
 
 # Optional
-sphinx==4.5.0
+sphinx==8.1.3
