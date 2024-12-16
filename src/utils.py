@@ -9,4 +9,3 @@ def summarize_data(data):
 
 if __name__ == "__main__":
     print("Run as utility module only.")
-"""
