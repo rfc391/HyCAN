@@ -9,7 +9,6 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout the repository code
       - name: Checkout
         uses: actions/checkout@v4
 
