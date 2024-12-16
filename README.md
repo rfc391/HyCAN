@@ -38,3 +38,37 @@ Analyze example data:
 ```bash
 python src/utils.py --data data/example_data.csv
 ```
+---
+
+## Project Structure
+
+```
+HyCAN/
+│
+├── README.md               # Project overview
+├── LICENSE                 # Licensing information
+├── .gitignore              # Git ignored files
+├── docs/                   # Documentation files
+│   ├── index.md            # Main documentation
+│   ├── images/             # Supporting images
+├── src/                    # Source code
+│   ├── main.py             # Main application script
+│   ├── utils.py            # Utility scripts
+│   ├── requirements.txt    # Python dependencies
+├── tests/                  # Unit and integration tests
+│   ├── test_main.py        # Tests for main.py
+│   ├── test_utils.py       # Tests for utils.py
+└── data/                   # Example datasets
+    └── example_data.csv    # Sample data file
+```
+
+---
+
+## Contributing
+
+We welcome contributions! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-name`.
+3. Commit your changes: `git commit -m "Description of changes"`.
+4. Push to the branch: `git push origin feature-name`.
+5. Submit a pull request.
