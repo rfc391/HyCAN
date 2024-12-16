@@ -1,16 +1,4 @@
 ```markdown
-## Description
-Please include a summary of the changes.
-
-## Checklist
-- [ ] Code compiles correctly
-- [ ] Tests added for new features
-- [ ] All tests passing
-- [ ] Code reviewed and approved
-```
-
-### 4. Issue Template for Bugs (`.github/ISSUE_TEMPLATE/bug_report.md`)
-```markdown
 ---
 name: Bug Report
 about: Create a report to help us improve
@@ -39,37 +27,3 @@ If applicable, add screenshots to help explain your problem.
 
 **Additional context:**
 Add any other context about the problem here.
-```
-
-### 5. Dockerfile
-```dockerfile
-FROM python:3.9-slim
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-COPY . .
-CMD ["python", "app.py"]
-```
-
-### 6. Example Test File (`tests/test_example.py`)
-```python
-# tests/test_example.py
-
-def test_sample():
-    assert 1 + 1 == 2
-```
-
-### 7. Linter and Formatter Configuration
-#### `.pylintrc` for Pylint:
-```ini
-[MASTER]
-ignore=tests
-
-[MESSAGES CONTROL]
-disable=missing-docstring,invalid-name
-```
-#### Black Configuration:
-Add the following to `pyproject.toml`:
-```toml
-[tool.black]
-line-length = 88
