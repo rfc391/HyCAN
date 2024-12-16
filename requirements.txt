@@ -1,6 +1,6 @@
 # Core dependencies
 Flask==3.1.0
-requests==2.27.1
+requests==2.32.2
 
 # Testing dependencies
 pytest==8.3.4
