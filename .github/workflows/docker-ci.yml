@@ -9,14 +9,16 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout the repository code
       - name: Checkout
         uses: actions/checkout@v4
 
       # Step 2: Log in to Docker Hub
-      uses: docker/login-action@v3
-      with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
-        password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       # Step 3: Set up Docker Buildx
       - name: Set up Docker Buildx
@@ -27,9 +29,10 @@ jobs:
       # Step 4: Build and Push Docker Image
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
-         context: .
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/robs391/hycan:latest
+        with:
+          context: .
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/hycan:latest
           push: ${{ github.event_name != 'pull_request' }}
-          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/robs391/hycan:cache
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/hycan:cache
           cache-to: type=inline
 
