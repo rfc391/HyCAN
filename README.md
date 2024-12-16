@@ -16,7 +16,7 @@ HyCAN is a cutting-edge research initiative focused on the development and optim
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/HyCAN.git
+   git clone https://github.com/rfc391/HyCAN.git
    cd HyCAN
    ```
 
