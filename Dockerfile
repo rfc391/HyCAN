@@ -1,20 +1,23 @@
-# Base image
+# File: Dockerfile
 FROM python:3.9-slim
 
-# Set the working directory in the container
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Set the working directory
 WORKDIR /app
 
-# Copy the requirements file to the container
-COPY requirements.txt .
+# Copy requirements and install dependencies
+COPY src/requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
-# Install dependencies
-RUN python -m pip install --upgrade pip
+# Copy the source code
+COPY src /app
 
-# Copy the application code to the container
-COPY . .
+# Expose necessary ports (if running a server, e.g., dashboard.py)
+EXPOSE 8050
 
-# Expose the port the application runs on
-EXPOSE 5000
-
-# Define the command to run the application
+# Default command
 CMD ["python", "main.py"]
