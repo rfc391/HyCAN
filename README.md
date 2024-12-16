@@ -1,14 +1,31 @@
 # HyCAN: Hydrogen Catalyst and Nanomaterials
 
-HyCAN is a cutting-edge research initiative focused on the development and optimization of hydrogen catalysts and nanomaterials for clean energy solutions. This repository provides resources, code, and data to support our research and promote collaboration in the field.
+## Project Overview
+HyCAN (Hydrogen Catalyst and Nanomaterials) is an innovative research project focused on leveraging advanced materials science and computational techniques to develop and optimize catalysts for hydrogen energy solutions. With the global push towards clean energy, HyCAN aims to be at the forefront of hydrogen production and storage technologies, utilizing cutting-edge nanomaterials and computational methods to overcome current challenges in efficiency, scalability, and cost.
+
+The project provides an open-source framework for researchers, developers, and scientists to collaborate on hydrogen nanomaterial solutions. This repository includes source code, datasets, and comprehensive documentation to support experimentation and model development.
+
+---
+
+## Key Objectives
+1. **Catalyst Optimization**: Enhance the efficiency and stability of hydrogen production catalysts.
+2. **Nanomaterial Synthesis**: Explore and simulate the properties of nanomaterials for hydrogen energy applications.
+3. **Open Collaboration**: Create a collaborative platform to advance clean energy technologies.
 
 ---
 
 ## Features
-- Advanced computational models for catalyst optimization.
-- Analysis tools for nanomaterial properties.
-- Dataset of hydrogen catalyst experiments.
-- Documentation and examples for researchers.
+- **Advanced Computational Models**: Implementations of machine learning algorithms for catalyst analysis.
+- **Data Analysis Tools**: Utilities for analyzing datasets on catalyst performance and nanomaterial properties.
+- **Data Visualization**: Interactive visualizations for understanding experimental outcomes.
+- **Documentation**: Comprehensive guides and tutorials for using and extending the repository.
+
+---
+
+## Applications
+- **Green Hydrogen Production**: Enable the transition to clean energy by improving hydrogen production processes.
+- **Renewable Energy Storage**: Develop storage solutions that integrate hydrogen with existing renewable energy systems.
+- **Materials Science Research**: Provide tools for researchers exploring new frontiers in nanotechnology.
 
 ---
 
