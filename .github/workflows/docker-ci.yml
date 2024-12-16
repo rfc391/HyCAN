@@ -28,3 +28,15 @@ jobs:
 
       # Step 4: Build and Push Docker Image
       - name: Build and Push Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/hycan:latest
+          push: ${{ github.event_name != 'pull_request' }}
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/hycan:cache
+          cache-to: type=inline
+
+      # Step 5: Notify Slack
+      - name: Send Notification to Slack
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"Build and Push Completed for branch: ${{ github.ref_name }}"}' ${{ secrets.SLACK_WEBHOOK_URL }}
