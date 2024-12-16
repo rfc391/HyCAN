@@ -1,5 +1,3 @@
-# File: tests/test_main.py
-
 import pytest
 from src.main import load_data, preprocess_data
 
