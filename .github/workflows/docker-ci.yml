@@ -23,7 +23,10 @@ jobs:
           driver: cloud
           endpoint: "robs391/hycan"
       - name: Build and push
-       run: |
-        docker build -t hycan-app .
-        docker tag hycan-app:latest ${{ secrets.DOCKER_USERNAME }}/hycan-app:latest
-        docker push ${{ secrets.DOCKER_USERNAME }}/hycan-app:latest
+      uses: docker/build-push-action@v5
+        with:
+          context: .
+          tags: ${{ secrets.DOCKER_USERNAME }}/IMAGE:latest
+          push: ${{ github.event_name != 'pull_request' }}
+          cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/IMAGE:cache
+          cache-to: type=inline
