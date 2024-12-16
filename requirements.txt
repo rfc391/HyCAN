@@ -1,5 +1,5 @@
 # Core dependencies
-Flask==2.1.1
+Flask==3.1.0
 requests==2.27.1
 
 # Testing dependencies
