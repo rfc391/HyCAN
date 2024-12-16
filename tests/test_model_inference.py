@@ -1,5 +1,3 @@
-# File: tests/test_model_inference.py
-
 import pandas as pd
 from src.models.model_inference import load_model, predict
 
