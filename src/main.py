@@ -15,4 +15,3 @@ if __name__ == "__main__":
     parser.add_argument("--data", type=str, default="data/example_data.csv", help="Path to data file")
     args = parser.parse_args()
     main(args.data)
-"""
