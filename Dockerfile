@@ -4,7 +4,6 @@ FROM python:3.13-slim
 RUN apt-get update && apt-get install -y python3-distutils gcc
 
 # Copy requirements and install them
-COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # Copy application code
