@@ -139,3 +139,52 @@ HyCAN/
 ## License
 
 MIT License. See the `LICENSE` file for more details.
+
+---
+
+## Additional Features
+
+### 1. Detailed Documentation
+- **User Guide**: Step-by-step instructions for running the project are included in the `docs/user_guide.md`.
+- **API Reference**: API details for extending and integrating HyCAN are available in `docs/api_reference.md`.
+- **FAQ**: Find solutions to common issues in the `docs/faq.md`.
+
+### 2. Comprehensive Testing
+- **End-to-End Tests**: Added in `tests/e2e_tests/` to validate the full data pipeline.
+- **Performance Benchmarks**: Scripts to benchmark models with large datasets are under `tests/performance/`.
+
+### 3. Enhanced Visualizations
+- **Custom Dashboards**: Users can now personalize their dashboard layout and plots dynamically.
+- **Localization Support**: Added multilingual options for the CLI and dashboard.
+
+### 4. Improved Interoperability
+- **File Formats**: Supports `.csv`, `.json`, and `.yaml` for data input/output.
+- **External Integration**: Ready-to-use notebooks for JupyterLab and Google Colab.
+
+### 5. Scalable Deployment
+- **Kubernetes Deployment**: Added Kubernetes manifests in `deployments/k8s/`.
+- **Optimized Containers**: Multi-stage Dockerfile reduces image size and build time.
+
+### 6. Machine Learning Enhancements
+- **Explainability Tools**: Integrated SHAP and LIME for model interpretability.
+- **Hyperparameter Tuning**: Integrated Optuna for automatic hyperparameter tuning.
+
+### 7. Community and Contribution
+- **Contribution Guidelines**: Detailed guide added in `CONTRIBUTING.md`.
+- **Code of Conduct**: Encourages respectful collaboration, included in `CODE_OF_CONDUCT.md`.
+
+### 8. Security Features
+- **Data Sanitization**: Scripts for anonymizing datasets added under `src/security/`.
+- **Secure API**: OAuth 2.0-based authentication for API endpoints.
+
+### 9. Real-Time Monitoring
+- Added Prometheus and Grafana configurations under `monitoring/` for tracking performance.
+
+### 10. Gamification for Learning
+- Interactive tutorials and challenges are now part of the web dashboard.
+
+---
+
+## Installation and Usage
+
+Follow the steps in the `docs/user_guide.md` for detailed installation and configuration instructions.
