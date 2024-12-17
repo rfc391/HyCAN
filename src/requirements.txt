@@ -1,11 +1,5 @@
-# Core dependencies
-Flask==3.1.0
-requests==2.32.2
-
-# Testing dependencies
-pytest==8.3.4
-pytest-cov==6.0.0
-
-# Linting and formatting
-pylint==3.3.2
-black==24.10.0
+streamlit==1.14.0
+pandas==1.5.3
+numpy==1.24.2
+scikit-learn==1.2.0
+rdkit==2022.03.5
