@@ -1,1 +1,3 @@
-Placeholder for cli.py
+# CLI for the HyCAN project
+
+print('HyCAN CLI Initialized...')
