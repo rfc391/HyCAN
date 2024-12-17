@@ -3,4 +3,4 @@ streamlit==1.37.0
 pandas==2.2.3
 numpy==1.24.2
 scikit-learn==1.2.0
-rdkit-pypi==2022.9.3
+rdkit-pypi==2022.9.5
