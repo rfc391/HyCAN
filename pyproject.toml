@@ -1,1 +1,2 @@
-   >>> Placeholder for Dockerfile
+[tool.black]
+line-length = 88
