@@ -6,3 +6,4 @@ xgboost
 dask
 mkdocs
 mkdocs-material
+mkdocs-markdownextradata-plugin
