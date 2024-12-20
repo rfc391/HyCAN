@@ -1,0 +1,35 @@
+import subprocess
+import os
+
+# Create a temporary directory for testing the build process
+build_test_dir = "/mnt/data/mkdocs_build_test"
+os.makedirs(build_test_dir, exist_ok=True)
+
+# Place a mock MkDocs project structure in the directory
+docs_dir = os.path.join(build_test_dir, "docs")
+os.makedirs(docs_dir, exist_ok=True)
+
+# Create basic files for testing
+with open(os.path.join(build_test_dir, "mkdocs.yml"), "w") as f:
+    f.write("""\
+site_name: Test Documentation
+nav:
+  - Home: index.md
+theme:
+  name: material
+plugins:
+  - search
+""")
+
+with open(os.path.join(docs_dir, "index.md"), "w") as f:
+    f.write("# Welcome to MkDocs\n\nThis is a test documentation.")
+
+# Test the MkDocs build command
+try:
+    build_output_dir = os.path.join(build_test_dir, "site")
+    subprocess.run(["mkdocs", "build", "--clean", "--site-dir", build_output_dir], check=True)
+    build_result = {"status": "success", "output_dir": build_output_dir}
+except subprocess.CalledProcessError as e:
+    build_result = {"status": "failure", "error": str(e)}
+
+build_result
