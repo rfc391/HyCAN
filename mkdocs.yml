@@ -1,42 +1,7 @@
-site_name: HyCAN Documentation
-repo_url: https://github.com/rfc391/HyCAN
+site_name: Test Documentation
 nav:
   - Home: index.md
-  - User Guide: user_guide.md
-  - FAQ: faq.md
-  - Tutorials:
-      - Data Preprocessing: tutorials/data_preprocessing.md
-      - Exploratory Analysis: tutorials/exploratory_analysis.md
-      - Model Training: tutorials/model_training.md
-      - Visualization: tutorials/visualization.md
-  - API Reference: api_reference.md
-  - Community:
-      - Code of Conduct: community/code_of_conduct.md
-      - Contributing: community/contributing.md
-      - Security: community/security.md
-      - Roadmap: community/roadmap.md
-  - Monitoring:
-      - Grafana Dashboard: monitoring/grafana-dashboard.md
-      - Prometheus: monitoring/prometheus.md
-
 theme:
   name: material
-  palette:
-    primary: 'blue'
-    accent: 'deep orange'
-  font:
-    text: Roboto
-    code: Roboto Mono
-
-markdown_extensions:
-  - admonition
-  - codehilite:
-      guess_lang: false
-  - toc:
-      permalink: true
-  - footnotes
-  - meta
-
 plugins:
   - search
-  - markdownextradata
