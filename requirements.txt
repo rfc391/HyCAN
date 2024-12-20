@@ -4,3 +4,5 @@ plotly
 rdkit
 xgboost
 dask
+mkdocs
+mkdocs-material
