@@ -4,24 +4,7 @@ nav:
   - Home: index.md
   - User Guide: user_guide.md
   - FAQ: faq.md
-  - Tutorials:
-      - Data Preprocessing: tutorials/data_preprocessing.md
-      - Model Training: tutorials/model_training.md
-  - API Reference: api_reference.md
-  - Community:
-      - Contributing: community/contributing.md
-  - Monitoring: monitoring/prometheus.md
-
 theme:
   name: material
-  palette:
-    primary: 'blue'
-    accent: 'orange'
-
-markdown_extensions:
-  - toc
-  - admonition
-
 plugins:
   - search
-  - markdownextradata
