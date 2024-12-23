@@ -1,24 +1,14 @@
-# File: src/dashboard.py
-
 import dash
 from dash import dcc, html, Input, Output
 import pandas as pd
 import plotly.express as px
 
-# Load data for visualization
-def load_dashboard_data(file_path: str):
-    try:
-        return pd.read_csv(file_path)
-    except Exception as e:
-        print(f"Error loading data: {e}")
-        return None
-
 # Initialize the Dash app
 app = dash.Dash(__name__)
 app.title = "HyCAN Dashboard"
 
-# Load example dataset
-data = load_dashboard_data("data/example_data.csv")
+# Global variable to hold data
+data = None
 
 # Layout for the dashboard
 app.layout = html.Div([
@@ -26,7 +16,7 @@ app.layout = html.Div([
 
     dcc.Dropdown(
         id="column-dropdown",
-        options=[{"label": col, "value": col} for col in data.columns],
+        options=[],  # To be updated dynamically
         placeholder="Select a column to visualize",
     ),
 
@@ -37,6 +27,14 @@ app.layout = html.Div([
         html.Pre(id="data-preview"),
     ])
 ])
+
+# Callback to update dropdown options and graph
+def update_data(new_data):
+    global data
+    data = new_data
+    app.layout.children[1].options = [
+        {"label": col, "value": col} for col in data.columns
+    ]
 
 # Callbacks for interactivity
 @app.callback(
@@ -53,4 +51,12 @@ def update_graph(column_name):
 
 # Run the app
 if __name__ == "__main__":
+    # Example usage with preprocessed data
+    mock_data = {
+        "column_name": [10, 20, 30, 40, 50],
+        "normalized_column": [0.2, 0.4, 0.6, 0.8, 1.0],
+        "other_column": ["A", "B", "C", "D", "E"]
+    }
+    df = pd.DataFrame(mock_data)
+    update_data(df)  # Load the example data into the dashboard
     app.run_server(debug=True)
