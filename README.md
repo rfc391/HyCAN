@@ -254,7 +254,6 @@ Key focus areas include:
 │   ├── test_main.py
 │   ├── test_model_inference.py
 │   ├── test_utils.py
-```
 ├── config.yml                  # Configuration file for customizable settings
 ├── docker-compose.yml          # Docker Compose file for easy deployment
 ├── docs/                       # MkDocs documentation
