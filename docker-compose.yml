@@ -2,9 +2,13 @@
 version: '3.8'
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "8050:8050"
+    environment:
+      - MONGO_URI=${MONGO_URI}
     volumes:
-      - .:/app
+      - .:/app:ro
     command: python src/visualizations/interactive_dashboard.py
