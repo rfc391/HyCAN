@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hycan-deployment
+  labels:
+    app: hycan
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hycan
+  template:
+    metadata:
+      labels:
+        app: hycan
+    spec:
+      containers:
+      - name: hycan-container
+        image: hycan:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: ENV_VAR_NAME
+          value: "value"
+        volumeMounts:
+        - name: hycan-volume
+          mountPath: /app/data
+      volumes:
+      - name: hycan-volume
+        persistentVolumeClaim:
+          claimName: hycan-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hycan-service
+spec:
+  selector:
+    app: hycan
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
