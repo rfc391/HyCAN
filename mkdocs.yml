@@ -4,7 +4,13 @@ nav:
   - Home: index.md
   - User Guide: user_guide.md
   - FAQ: faq.md
+  - Research Papers: research_papers.md
+  - Machine Learning Models: ml_models.md
+  - Bioinformatics: bioinformatics.md
+  - Materials Science: materials_science.md
 theme:
   name: material
 plugins:
   - search
+  - mkdocs-material-extensions
+  - mkdocs-git-revision-date-localized-plugin
