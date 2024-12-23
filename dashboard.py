@@ -51,3 +51,10 @@ def update_graph(column_name):
 
 if __name__ == "__main__":
     app.run_server(debug=True)
+
+def show_data_summary(data):
+    """Computes and returns a summary of the data."""
+    import pandas as pd
+    if not isinstance(data, pd.DataFrame):
+        raise ValueError("Input data must be a pandas DataFrame.")
+    return data.describe()
