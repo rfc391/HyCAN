@@ -90,7 +90,7 @@ For details, refer to the `src/api/` folder and the API reference in the `docs/`
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/hycan.git
+   git clone https://github.com/rfc391/hycan.git
    ```
 2. Navigate to the project directory:
    ```bash
