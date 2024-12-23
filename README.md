@@ -103,15 +103,18 @@ For details, refer to the `src/api/` folder and the API reference in the `docs/`
 
 ### Running the Project
 
-- **Using Python**:
-  ```bash
-  python main.py
-  ```
-- **Using Docker**:
-  ```bash
-  docker build -t hycan .
-  docker run -p 8000:8000 hycan
-  ```
+### Command-Line Interface (CLI)
+
+#### Process Data
+```bash
+python cli.py process-data --file <path-to-data-file>
+```
+
+#### Serve Dashboard
+```bash
+python cli.py serve-dashboard
+```
+This launches the interactive dashboard on [http://127.0.0.1:8050](http://127.0.0.1:8050).
 
 ---
 
@@ -123,6 +126,35 @@ HyCAN collaborates with the Heartland BioWorks Hub (HBW), a Regional Tech Hub su
 
 ---
 
+### Development Setup
+1. Install dependencies:
+   ```bash
+   pip install -r requirements-dev.txt
+   ```
+2. Run tests:
+   ```bash
+   pytest
+   ```
+   
+---
+
+### Kubernetes Deployment
+1. Build and push the Docker image:
+   ```bash
+   docker build -t <dockerhub-username>/hycan:latest .
+   docker push <dockerhub-username>/hycan:latest
+   ```
+2. Apply the deployment and service configuration:
+   ```bash
+   kubectl apply -f deployment.yaml
+   ```
+3. Monitor the application:
+   ```bash
+   kubectl get pods
+   kubectl get svc
+      
+---
+   
 ## Security
 
 If you discover a security issue, please follow the guidelines in [SECURITY.md](SECURITY.md).
