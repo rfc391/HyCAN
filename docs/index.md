@@ -1,10 +1,11 @@
-
 # Welcome to HyCAN Documentation
 
-This is the comprehensive guide for using and developing HyCAN.
+HyCAN (Hybrid Contrastive Attributed Network Embedding) is a sophisticated approach for embedding attributed networks by combining contrastive learning and graph structure modeling. This documentation provides a detailed guide to understand, use, and contribute to the HyCAN project.
 
-## Features
-- Interactive dashboards
-- API integration
-- Machine learning pipelines
-- Comprehensive data processing
+Explore:
+- Installation and usage instructions
+- Configuration options
+- API reference
+- Contribution guidelines
+
+Let’s get started!
