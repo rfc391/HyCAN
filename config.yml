@@ -1,0 +1,5 @@
+
+# HyCAN Configuration File
+default_strategy: mean
+api_base_url: https://jsonplaceholder.typicode.com
+docker_port: 8050
