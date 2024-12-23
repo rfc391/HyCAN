@@ -1,3 +1,3 @@
 # Performance Tests
 
-Scripts to benchmark large datasets.
+# Scripts to benchmark large datasets.

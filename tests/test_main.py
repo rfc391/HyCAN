@@ -1,5 +1,5 @@
 import pytest
-from src.main import load_data, preprocess_data
+from HyCAN_main.src.main import load_data, preprocess_data
 
 def test_load_data_valid_file():
     result = load_data("data/example_data.csv")

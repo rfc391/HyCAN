@@ -1,6 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from src.dashboard import show_data_summary, plot_data
+from HyCAN_main.src.dashboard import show_data_summary, plot_data
 
 def test_data_summary():
     """Test the data summary function."""
