@@ -21,7 +21,7 @@ Key focus areas include:
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/HyCAN.git
+   git clone https://github.com/rfc391/HyCAN.git
    cd HyCAN
    ```
 2. Install dependencies:
