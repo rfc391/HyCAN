@@ -1,22 +1,18 @@
-
 version: '3.8'
+
 services:
-  app:
+  hycan:
+    image: hycan:latest
     build:
       context: .
+      dockerfile: Dockerfile
+    container_name: hycan-container
     ports:
-      - "8501:8501"
+      - "80:80"
+    environment:
+      ENV_VAR_NAME: "value"
     volumes:
-      - .:/app
-  prometheus:
-    image: prom/prometheus
-    ports:
-      - "9090:9090"
-    volumes:
-      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
-  grafana:
-    image: grafana/grafana
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./monitoring/grafana-dashboard.json:/var/lib/grafana/dashboards/default.json
+      - hycan-volume:/app/data
+
+volumes:
+  hycan-volume:
