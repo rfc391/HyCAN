@@ -58,3 +58,12 @@ def show_data_summary(data):
     if not isinstance(data, pd.DataFrame):
         raise ValueError("Input data must be a pandas DataFrame.")
     return data.describe()
+
+import plotly.express as px
+
+def create_interactive_plot(data, x_column, y_column):
+    """Creates an interactive Plotly figure."""
+    if x_column not in data.columns or y_column not in data.columns:
+        raise ValueError("Specified columns must exist in the data.")
+    fig = px.scatter(data, x=x_column, y=y_column, title=f"Interactive {y_column} vs {x_column}")
+    return fig
