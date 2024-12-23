@@ -1,5 +1,3 @@
-### `faq.md`
-```markdown
 # HyCAN FAQ
 
 ## General Questions
