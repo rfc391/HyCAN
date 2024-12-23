@@ -1,3 +1,29 @@
-# Grafana Dashboard
-
-Visualizations for tracking performance.
+{
+    "dashboard": {
+        "id": null,
+        "title": "Python Metrics Dashboard",
+        "tags": [
+            "example"
+        ],
+        "timezone": "browser",
+        "panels": [
+            {
+                "type": "graph",
+                "title": "Example Metric",
+                "targets": [
+                    {
+                        "expr": "example_metric",
+                        "legendFormat": "{{instance}}"
+                    }
+                ],
+                "gridPos": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 12,
+                    "h": 6
+                }
+            }
+        ]
+    },
+    "overwrite": true
+}
