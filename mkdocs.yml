@@ -8,4 +8,3 @@ theme:
   name: material
 plugins:
   - search
-  - mkdocs-material-extensions
