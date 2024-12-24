@@ -1,14 +1,11 @@
-dash
-flask
-joblib
-matplotlib
-pandas
-plotly
-pytest
-pytest-cov
-pylint
-black
-setuptools
-mkdocs
-mkdocs-material
-mkdocs-markdownextradata-plugin
+# Core dependencies
+Flask==3.1.0
+requests==2.32.2
+
+# Testing dependencies
+pytest==8.3.4
+pytest-cov==6.0.0
+
+# Linting and formatting
+pylint==3.3.2
+black==24.10.0
