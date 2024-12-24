@@ -1,42 +1,42 @@
-
 import dash
 from dash import dcc, html, Input, Output
 import pandas as pd
 import plotly.express as px
-import logging
 
-logging.basicConfig(level=logging.INFO)
-
-def load_dashboard_data(file_path: str):
-    try:
-        logging.info(f"Loading data from {file_path}")
-        data = pd.read_csv(file_path)
-        return data
-    except Exception as e:
-        logging.error(f"Error loading data: {e}")
-        return None
-
+# Initialize the Dash app
 app = dash.Dash(__name__)
 app.title = "HyCAN Dashboard"
 
-data = load_dashboard_data("data/example_data.csv")
-if data is None:
-    data = pd.DataFrame(columns=["Column1", "Column2"])
+# Global variable to hold data
+data = None
 
+# Layout for the dashboard
 app.layout = html.Div([
     html.H1("HyCAN Data Visualization", style={"textAlign": "center"}),
+
     dcc.Dropdown(
         id="column-dropdown",
-        options=[{"label": col, "value": col} for col in data.columns],
+        options=[],  # To be updated dynamically
         placeholder="Select a column to visualize",
     ),
+
     dcc.Graph(id="column-graph"),
+
     html.Div([
         html.H3("Dataset Preview"),
         html.Pre(id="data-preview"),
     ])
 ])
 
+# Callback to update dropdown options and graph
+def update_data(new_data):
+    global data
+    data = new_data
+    app.layout.children[1].options = [
+        {"label": col, "value": col} for col in data.columns
+    ]
+
+# Callbacks for interactivity
 @app.callback(
     [Output("column-graph", "figure"), Output("data-preview", "children")],
     [Input("column-dropdown", "value")]
@@ -49,21 +49,14 @@ def update_graph(column_name):
     preview = data[[column_name]].head().to_string()
     return fig, f"Preview:\n{preview}"
 
+# Run the app
 if __name__ == "__main__":
+    # Example usage with preprocessed data
+    mock_data = {
+        "column_name": [10, 20, 30, 40, 50],
+        "normalized_column": [0.2, 0.4, 0.6, 0.8, 1.0],
+        "other_column": ["A", "B", "C", "D", "E"]
+    }
+    df = pd.DataFrame(mock_data)
+    update_data(df)  # Load the example data into the dashboard
     app.run_server(debug=True)
-
-def show_data_summary(data):
-    """Computes and returns a summary of the data."""
-    import pandas as pd
-    if not isinstance(data, pd.DataFrame):
-        raise ValueError("Input data must be a pandas DataFrame.")
-    return data.describe()
-
-import plotly.express as px
-
-def create_interactive_plot(data, x_column, y_column):
-    """Creates an interactive Plotly figure."""
-    if x_column not in data.columns or y_column not in data.columns:
-        raise ValueError("Specified columns must exist in the data.")
-    fig = px.scatter(data, x=x_column, y=y_column, title=f"Interactive {y_column} vs {x_column}")
-    return fig

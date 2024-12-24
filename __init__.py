@@ -1,1 +1,1 @@
-"""HyCAN package initialization."""
+# Initialize src package
