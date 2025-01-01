@@ -1,0 +1,31 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "HyCAN Monitoring Dashboard",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Request Count",
+        "targets": [
+          {
+            "expr": "request_count",
+            "legendFormat": "Request Count",
+            "refId": "A"
+          }
+        ]
+      },
+      {
+        "type": "graph",
+        "title": "Memory Usage",
+        "targets": [
+          {
+            "expr": "memory_usage",
+            "legendFormat": "Memory %",
+            "refId": "B"
+          }
+        ]
+      }
+    ]
+  },
+  "overwrite": true
+}
