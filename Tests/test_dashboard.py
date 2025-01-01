@@ -1,7 +1,7 @@
 
 import pandas as pd
-from src.show_data_summary import show_data_summary
-from src.visualizations.plotter import plot_data
+from HyCAN-main.show_data_summary import show_data_summary
+from HyCAN-main.visualizations.plotter import plot_data
 
 def test_data_summary():
     """Test the data summary function."""

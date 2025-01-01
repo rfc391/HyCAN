@@ -2,7 +2,7 @@ def test_sample():
     assert 1 + 1 == 2
 
 import pandas as pd
-from src.models.model_inference import load_model, predict
+from HyCAN-main.models.model_inference import load_model, predict
 
 def test_load_model_valid():
     model = load_model("src/models/pretrained_model.pkl")

@@ -6,8 +6,8 @@ import os
 sys.path.insert(0, '/mnt/data/HyCAN-main/HyCAN-main/src')
 
 # Import the functions to test
-from src.bioinformatics.sequence_analysis import align_sequences
-from src.bioinformatics.genomic_visualization import visualize_genome
+from HyCAN-main.bioinformatics.sequence_analysis import align_sequences
+from HyCAN-main.bioinformatics.genomic_visualization import visualize_genome
 
 def test_align_sequences():
     result = align_sequences("ATCG", "TAGC")
