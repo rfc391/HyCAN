@@ -1,0 +1,327 @@
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.11.8, pytest-6.2.5, py-1.11.0, pluggy-1.5.0 -- /usr/local/bin/python
+cachedir: .pytest_cache
+rootdir: /mnt/data/HyCAN-main/HyCAN-main/Tests, configfile: pytest.ini
+plugins: Faker-8.13.2, anyio-3.7.1
+[1mcollecting ... [0mcollected 6 items / 16 errors
+
+==================================== ERRORS ====================================
+[31m[1m_________________ ERROR collecting test_advanced_monitoring.py _________________[0m
+[31m[1m[31m.local/lib/python3.11/site-packages/_pytest/python.py[0m:578: in _importtestmodule
+    mod = import_path([96mself[39;49;00m.fspath, mode=importmode)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/pathlib.py[0m:524: in import_path
+    importlib.import_module(module_name)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1204: in _gcd_import
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1176: in _find_and_load
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1147: in _find_and_load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:690: in _load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:161: in exec_module
+    source_stat, co = _rewrite_test(fn, [96mself[39;49;00m.config)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:354: in _rewrite_test
+    tree = ast.parse(source, filename=fn_)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/ast.py[0m:50: in parse
+    [94mreturn[39;49;00m [96mcompile[39;49;00m(source, filename, mode, flags,[90m[39;49;00m
+[1m[31mE     File "/mnt/data/HyCAN-main/HyCAN-main/Tests/test_advanced_monitoring.py", line 11[0m
+[1m[31mE       from HyCAN-main.monitoring.advanced_monitoring import tracer[0m
+[1m[31mE                 ^[0m
+[1m[31mE   SyntaxError: invalid syntax[0m[0m
+[31m[1m___________________ ERROR collecting test_bioinformatics.py ____________________[0m
+[31m[1m[31m.local/lib/python3.11/site-packages/_pytest/python.py[0m:578: in _importtestmodule
+    mod = import_path([96mself[39;49;00m.fspath, mode=importmode)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/pathlib.py[0m:524: in import_path
+    importlib.import_module(module_name)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1204: in _gcd_import
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1176: in _find_and_load
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1147: in _find_and_load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:690: in _load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:161: in exec_module
+    source_stat, co = _rewrite_test(fn, [96mself[39;49;00m.config)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:354: in _rewrite_test
+    tree = ast.parse(source, filename=fn_)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/ast.py[0m:50: in parse
+    [94mreturn[39;49;00m [96mcompile[39;49;00m(source, filename, mode, flags,[90m[39;49;00m
+[1m[31mE     File "/mnt/data/HyCAN-main/HyCAN-main/Tests/test_bioinformatics.py", line 9[0m
+[1m[31mE       from HyCAN-main.bioinformatics.sequence_analysis import align_sequences[0m
+[1m[31mE                 ^[0m
+[1m[31mE   SyntaxError: invalid syntax[0m[0m
+[31m[1m______________________ ERROR collecting test_dashboard.py ______________________[0m
+[31m[1m[31m.local/lib/python3.11/site-packages/_pytest/python.py[0m:578: in _importtestmodule
+    mod = import_path([96mself[39;49;00m.fspath, mode=importmode)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/pathlib.py[0m:524: in import_path
+    importlib.import_module(module_name)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1204: in _gcd_import
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1176: in _find_and_load
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1147: in _find_and_load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:690: in _load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:161: in exec_module
+    source_stat, co = _rewrite_test(fn, [96mself[39;49;00m.config)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:354: in _rewrite_test
+    tree = ast.parse(source, filename=fn_)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/ast.py[0m:50: in parse
+    [94mreturn[39;49;00m [96mcompile[39;49;00m(source, filename, mode, flags,[90m[39;49;00m
+[1m[31mE     File "/mnt/data/HyCAN-main/HyCAN-main/Tests/test_dashboard.py", line 3[0m
+[1m[31mE       from HyCAN-main.show_data_summary import show_data_summary[0m
+[1m[31mE                 ^[0m
+[1m[31mE   SyntaxError: invalid syntax[0m[0m
+[31m[1m_____________________ ERROR collecting test_data_loader.py _____________________[0m
+[31m[1m[31m.local/lib/python3.11/site-packages/_pytest/python.py[0m:578: in _importtestmodule
+    mod = import_path([96mself[39;49;00m.fspath, mode=importmode)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/pathlib.py[0m:524: in import_path
+    importlib.import_module(module_name)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1204: in _gcd_import
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1176: in _find_and_load
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1147: in _find_and_load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:690: in _load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:161: in exec_module
+    source_stat, co = _rewrite_test(fn, [96mself[39;49;00m.config)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:354: in _rewrite_test
+    tree = ast.parse(source, filename=fn_)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/ast.py[0m:50: in parse
+    [94mreturn[39;49;00m [96mcompile[39;49;00m(source, filename, mode, flags,[90m[39;49;00m
+[1m[31mE     File "/mnt/data/HyCAN-main/HyCAN-main/Tests/test_data_loader.py", line 2[0m
+[1m[31mE       from HyCAN-main.data.data_loader import validate_dataset[0m
+[1m[31mE                 ^[0m
+[1m[31mE   SyntaxError: invalid syntax[0m[0m
+[31m[1m________________________ ERROR collecting test_main.py _________________________[0m
+[31mImportError while importing test module '/mnt/data/HyCAN-main/HyCAN-main/Tests/test_main.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+[1m[31m/usr/local/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m/mnt/data/HyCAN-main/HyCAN-main/Tests/test_main.py[0m:4: in <module>
+    [94mfrom[39;49;00m [04m[96mmain[39;49;00m [94mimport[39;49;00m app[90m[39;49;00m
+[1m[31mE   ModuleNotFoundError: No module named 'main'[0m[0m
+[31m[1m___________________ ERROR collecting test_model_inference.py ___________________[0m
+[31m[1m[31m.local/lib/python3.11/site-packages/_pytest/python.py[0m:578: in _importtestmodule
+    mod = import_path([96mself[39;49;00m.fspath, mode=importmode)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/pathlib.py[0m:524: in import_path
+    importlib.import_module(module_name)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1204: in _gcd_import
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1176: in _find_and_load
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1147: in _find_and_load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:690: in _load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:161: in exec_module
+    source_stat, co = _rewrite_test(fn, [96mself[39;49;00m.config)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:354: in _rewrite_test
+    tree = ast.parse(source, filename=fn_)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/ast.py[0m:50: in parse
+    [94mreturn[39;49;00m [96mcompile[39;49;00m(source, filename, mode, flags,[90m[39;49;00m
+[1m[31mE     File "/mnt/data/HyCAN-main/HyCAN-main/Tests/test_model_inference.py", line 5[0m
+[1m[31mE       from HyCAN-main.models.model_inference import load_model, predict[0m
+[1m[31mE                 ^[0m
+[1m[31mE   SyntaxError: invalid syntax[0m[0m
+[31m[1m________________________ ERROR collecting test_utils.py ________________________[0m
+[31mImportError while importing test module '/mnt/data/HyCAN-main/HyCAN-main/Tests/test_utils.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+[1m[31m/usr/local/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m/mnt/data/HyCAN-main/HyCAN-main/Tests/test_utils.py[0m:4: in <module>
+    [94mfrom[39;49;00m [04m[96mutils[39;49;00m [94mimport[39;49;00m read_file, write_file[90m[39;49;00m
+[1m[31mE   ModuleNotFoundError: No module named 'utils'[0m[0m
+[31m[1m______________ ERROR collecting tests/test_advanced_monitoring.py ______________[0m
+[31m[1m[31m.local/lib/python3.11/site-packages/_pytest/python.py[0m:578: in _importtestmodule
+    mod = import_path([96mself[39;49;00m.fspath, mode=importmode)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/pathlib.py[0m:524: in import_path
+    importlib.import_module(module_name)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1204: in _gcd_import
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1176: in _find_and_load
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1147: in _find_and_load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:690: in _load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:161: in exec_module
+    source_stat, co = _rewrite_test(fn, [96mself[39;49;00m.config)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:354: in _rewrite_test
+    tree = ast.parse(source, filename=fn_)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/ast.py[0m:50: in parse
+    [94mreturn[39;49;00m [96mcompile[39;49;00m(source, filename, mode, flags,[90m[39;49;00m
+[1m[31mE     File "/mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_advanced_monitoring.py", line 11[0m
+[1m[31mE       from HyCAN-main.monitoring.advanced_monitoring import tracer[0m
+[1m[31mE                 ^[0m
+[1m[31mE   SyntaxError: invalid syntax[0m[0m
+[31m[1m________________ ERROR collecting tests/test_bioinformatics.py _________________[0m
+[31m[1m[31m.local/lib/python3.11/site-packages/_pytest/python.py[0m:578: in _importtestmodule
+    mod = import_path([96mself[39;49;00m.fspath, mode=importmode)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/pathlib.py[0m:524: in import_path
+    importlib.import_module(module_name)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1204: in _gcd_import
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1176: in _find_and_load
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1147: in _find_and_load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:690: in _load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:161: in exec_module
+    source_stat, co = _rewrite_test(fn, [96mself[39;49;00m.config)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:354: in _rewrite_test
+    tree = ast.parse(source, filename=fn_)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/ast.py[0m:50: in parse
+    [94mreturn[39;49;00m [96mcompile[39;49;00m(source, filename, mode, flags,[90m[39;49;00m
+[1m[31mE     File "/mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_bioinformatics.py", line 9[0m
+[1m[31mE       from HyCAN-main.bioinformatics.sequence_analysis import align_sequences[0m
+[1m[31mE                 ^[0m
+[1m[31mE   SyntaxError: invalid syntax[0m[0m
+[31m[1m___________________ ERROR collecting tests/test_dashboard.py ___________________[0m
+[31m[1m[31m.local/lib/python3.11/site-packages/_pytest/python.py[0m:578: in _importtestmodule
+    mod = import_path([96mself[39;49;00m.fspath, mode=importmode)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/pathlib.py[0m:524: in import_path
+    importlib.import_module(module_name)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1204: in _gcd_import
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1176: in _find_and_load
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1147: in _find_and_load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:690: in _load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:161: in exec_module
+    source_stat, co = _rewrite_test(fn, [96mself[39;49;00m.config)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:354: in _rewrite_test
+    tree = ast.parse(source, filename=fn_)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/ast.py[0m:50: in parse
+    [94mreturn[39;49;00m [96mcompile[39;49;00m(source, filename, mode, flags,[90m[39;49;00m
+[1m[31mE     File "/mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_dashboard.py", line 3[0m
+[1m[31mE       from HyCAN-main.show_data_summary import show_data_summary[0m
+[1m[31mE                 ^[0m
+[1m[31mE   SyntaxError: invalid syntax[0m[0m
+[31m[1m__________________ ERROR collecting tests/test_data_loader.py __________________[0m
+[31m[1m[31m.local/lib/python3.11/site-packages/_pytest/python.py[0m:578: in _importtestmodule
+    mod = import_path([96mself[39;49;00m.fspath, mode=importmode)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/pathlib.py[0m:524: in import_path
+    importlib.import_module(module_name)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1204: in _gcd_import
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1176: in _find_and_load
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1147: in _find_and_load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:690: in _load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:161: in exec_module
+    source_stat, co = _rewrite_test(fn, [96mself[39;49;00m.config)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:354: in _rewrite_test
+    tree = ast.parse(source, filename=fn_)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/ast.py[0m:50: in parse
+    [94mreturn[39;49;00m [96mcompile[39;49;00m(source, filename, mode, flags,[90m[39;49;00m
+[1m[31mE     File "/mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_data_loader.py", line 2[0m
+[1m[31mE       from HyCAN-main.data.data_loader import validate_dataset[0m
+[1m[31mE                 ^[0m
+[1m[31mE   SyntaxError: invalid syntax[0m[0m
+[31m[1m_____________________ ERROR collecting tests/test_main.py ______________________[0m
+[31mImportError while importing test module '/mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_main.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+[1m[31m/usr/local/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m/mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_main.py[0m:4: in <module>
+    [94mfrom[39;49;00m [04m[96mmain[39;49;00m [94mimport[39;49;00m app[90m[39;49;00m
+[1m[31mE   ModuleNotFoundError: No module named 'main'[0m[0m
+[31m[1m________________ ERROR collecting tests/test_model_inference.py ________________[0m
+[31m[1m[31m.local/lib/python3.11/site-packages/_pytest/python.py[0m:578: in _importtestmodule
+    mod = import_path([96mself[39;49;00m.fspath, mode=importmode)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/pathlib.py[0m:524: in import_path
+    importlib.import_module(module_name)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1204: in _gcd_import
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1176: in _find_and_load
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:1147: in _find_and_load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m<frozen importlib._bootstrap>[0m:690: in _load_unlocked
+    [04m[91m?[39;49;00m[04m[91m?[39;49;00m[04m[91m?[39;49;00m[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:161: in exec_module
+    source_stat, co = _rewrite_test(fn, [96mself[39;49;00m.config)[90m[39;49;00m
+[1m[31m.local/lib/python3.11/site-packages/_pytest/assertion/rewrite.py[0m:354: in _rewrite_test
+    tree = ast.parse(source, filename=fn_)[90m[39;49;00m
+[1m[31m/usr/local/lib/python3.11/ast.py[0m:50: in parse
+    [94mreturn[39;49;00m [96mcompile[39;49;00m(source, filename, mode, flags,[90m[39;49;00m
+[1m[31mE     File "/mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_model_inference.py", line 5[0m
+[1m[31mE       from HyCAN-main.models.model_inference import load_model, predict[0m
+[1m[31mE                 ^[0m
+[1m[31mE   SyntaxError: invalid syntax[0m[0m
+[31m[1m_____________________ ERROR collecting tests/test_utils.py _____________________[0m
+[31mImportError while importing test module '/mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_utils.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+[1m[31m/usr/local/lib/python3.11/importlib/__init__.py[0m:126: in import_module
+    [94mreturn[39;49;00m _bootstrap._gcd_import(name[level:], package, level)[90m[39;49;00m
+[1m[31m/mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_utils.py[0m:4: in <module>
+    [94mfrom[39;49;00m [04m[96mutils[39;49;00m [94mimport[39;49;00m read_file, write_file[90m[39;49;00m
+[1m[31mE   ModuleNotFoundError: No module named 'utils'[0m[0m
+[31m[1m______________ ERROR collecting tests/e2e_tests/test_pipeline.py _______________[0m
+[31mimport file mismatch:
+imported module 'test_pipeline' has this __file__ attribute:
+  /mnt/data/HyCAN-main/HyCAN-main/Tests/e2e_tests/test_pipeline.py
+which is not the same as the test file we want to collect:
+  /mnt/data/HyCAN-main/HyCAN-main/Tests/tests/e2e_tests/test_pipeline.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules[0m
+[31m[1m__________ ERROR collecting tests/performance/test_large_datasets.py ___________[0m
+[31mimport file mismatch:
+imported module 'test_large_datasets' has this __file__ attribute:
+  /mnt/data/HyCAN-main/HyCAN-main/Tests/performance/test_large_datasets.py
+which is not the same as the test file we want to collect:
+  /mnt/data/HyCAN-main/HyCAN-main/Tests/tests/performance/test_large_datasets.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules[0m
+=========================== short test summary info ============================
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/test_advanced_monitoring.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/test_bioinformatics.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/test_dashboard.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/test_data_loader.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/test_main.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/test_model_inference.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/test_utils.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_advanced_monitoring.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_bioinformatics.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_dashboard.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_data_loader.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_main.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_model_inference.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/tests/test_utils.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/tests/e2e_tests/test_pipeline.py
+ERROR ../../mnt/data/HyCAN-main/HyCAN-main/Tests/tests/performance/test_large_datasets.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 16 errors during collection !!!!!!!!!!!!!!!!!!!
+[31m============================== [31m[1m16 errors[0m[31m in 2.05s[0m[31m ==============================[0m
