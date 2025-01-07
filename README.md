@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 # HyCAN Project
 
 ## Overview
@@ -25,6 +26,14 @@ pytest tests/
 Provide an overview of the project and its purpose.
 
 ## Features
+=======
+# HyCAN
+
+## Overview
+Provide an overview of the project and its purpose.
+
+## Features
+>>>>>>> Stashed changes
 - List
 - Of
 - Key
@@ -42,4 +51,7 @@ Details on Protobuf usage in the project.
 ## Contributors
 - Name 1
 - Name 2
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
