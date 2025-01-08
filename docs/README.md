@@ -1,57 +1,71 @@
 
-# HyCAN - Hybrid Computational Analytics Network
+# HyCAN (Hydrogen Catalyst and Nanomaterials)
 
 ## Overview
-HyCAN is a comprehensive platform for computational analytics, designed to integrate machine learning, data visualization, and bioinformatics. With its modular and scalable architecture, HyCAN provides robust tools for advanced data analysis and visualization.
+HyCAN is an open-source initiative driving innovation in clean hydrogen energy. By integrating advanced synthesis, biotechnology, and nanomaterials, HyCAN pushes the boundaries of sustainable energy solutions.
 
 ## Features
-- **Machine Learning**: Incorporates transfer learning, ensemble models, and automation tools for training and inference.
-- **Data Visualization**: Interactive dashboards and genomic visualizations for advanced analytics.
-- **Bioinformatics**: Tools for sequence analysis, phylogenetics, and functional annotation.
-- **Secure Architecture**: Secure data handling and integration with cloud services (AWS, GCP).
+- Advanced synthesis methods for hydrogen production
+- Cutting-edge nanomaterials for improved efficiency
+- Interactive dashboards for analytics and monitoring
+- Scalable architecture supporting large datasets
 
-## Getting Started
-
-### Prerequisites
-- Python 3.9+
-- Docker and Docker Compose
-- Node.js and npm (for frontend components)
-
-### Installation
-1. Clone the repository:
+## Installation
+### Using Docker
+1. **Build the Docker image**:
    ```bash
-   git clone https://github.com/your-org/hycan.git
-   cd hycan
+   docker build -t hycan:latest -f Dockerfile .
    ```
-
-2. Install dependencies:
-   ```bash
-   pip install -r config/requirements.txt
-   ```
-
-3. Run the application:
+2. **Run the application** using `docker-compose`:
    ```bash
    docker-compose up --build
    ```
+   This will start the application and expose the services on the configured ports.
 
-4. Access the application:
-   - Frontend: `http://localhost:3000`
-   - Backend API: `http://localhost:8000`
+### Local Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-organization>/HyCAN.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd HyCAN
+   ```
+3. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run the application:
+   ```bash
+   python main.py
+   ```
+
+## Usage
+- For model training and feature engineering, refer to the `core/` folder.
+- Visualization tools can be found in the `visualization/` folder.
+- Configuration files are located in `config/` for customization.
 
 ## Testing
-- Run backend tests:
-   ```bash
-   pytest tests/
-   ```
-- Run visualization tests:
-   ```bash
-   python -m unittest discover -s visualization
-   ```
+To run tests locally:
+```bash
+pytest tests/
+```
 
 ## Contributing
-Contributions are welcome! Please review the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+1. Fork the repository.
+2. Create a feature branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Description of your changes"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a pull request.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
+This project is licensed under the MIT License. See the `LICENSE` file for details.

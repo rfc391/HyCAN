@@ -1,4 +1,13 @@
-# Add necessary Python packages here.
 
 grpcio
 grpcio-tools
+numpy
+dash
+flask
+pyyaml
+joblib
+scikit-learn
+pytest
+argparse
+plotly
+pandas
