@@ -1,5 +1,6 @@
 # HyCAN
 
+<<<<<<< Updated upstream
 ## Project Overview
 This project is designed to [add a brief description of the project's purpose and key features here].
 
@@ -36,3 +37,26 @@ This project is licensed under the [Add License Name] License.
 
 ## Contact
 For questions or suggestions, please contact [Your Contact Information].
+=======
+## Overview
+Provide an overview of the project and its purpose.
+
+## Features
+- List
+- Of
+- Key
+- Features
+
+## Usage
+Instructions for usage.
+
+## Installation
+Steps for installation.
+
+## Protocol Buffers
+Details on Protobuf usage in the project.
+
+## Contributors
+- Name 1
+- Name 2
+>>>>>>> Stashed changes
