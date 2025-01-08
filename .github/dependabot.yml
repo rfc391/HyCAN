@@ -1,180 +1,151 @@
-
 version: 2
 updates:
-
-  - package-ecosystem: "bundler"
-    directories:
-      - "/updater"
-      - "/"
-    schedule:
-      interval: "daily"
-    groups:
-      sorbet:
-        patterns:
-          - "*-sorbet"
-          - "sorbet-*"
-          - "sorbet"
-          - "tapioca"
-      aws-sdk:
-        patterns:
-          - "aws-sdk-*"
-      prod-dependencies:
-        dependency-type: "production"
-        update-types:
-          - "minor"
-          - "patch"
-      dev-dependencies:
-        dependency-type: "development"
-        update-types:
-          - "minor"
-          - "patch"
-
-  - package-ecosystem: "composer"
-    directories:
-      - "/composer/helpers/v2"
-    schedule:
-      interval: "daily"
-    groups:
-      prod-dependencies:
-        dependency-type: "production"
-        update-types:
-          - "minor"
-          - "patch"
-      dev-dependencies:
-        dependency-type: "development"
-        update-types:
-          - "minor"
-          - "patch"
-  - package-ecosystem: "devcontainers"
-    directory: "/"
-    schedule:
-      interval: "daily"
-  - package-ecosystem: "docker"
-    directories:
-      - "/"
-      - "/go_modules"
-      - "/cargo"
-    schedule:
-      interval: "daily"
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    groups:
-      all-actions:
-        patterns: [ "*" ]
-  - package-ecosystem: "gomod"
-    directory: "/go_modules/helpers"
-    schedule:
-      interval: "daily"
-  - package-ecosystem: "mix"
-    directory: "/hex/helpers"
-    schedule:
-      interval: "daily"
-  - package-ecosystem: "npm"
-    directory: "/npm_and_yarn/helpers"
-    schedule:
-      interval: "daily"
-    groups:
-      npm-dependencies:
-        patterns:
-          - "@npmcli/arborist"
-          - "nock"
-          - "npm"
-          - "semver"
-        exclude-patterns:
-          - "detect-indent"
-      yarn-dependencies:
-        patterns:
-          - "@dependabot/yarn-lib"
-      pnpm-dependencies:
-        patterns:
-          - "@pnpm/lockfile-file"
-          - "@pnpm/dependency-path"
-      dev-dependencies:
-        dependency-type: "development"
-        update-types:
-          - "minor"
-          - "patch"
-    ignore:
-      - dependency-name: "npm"
-        update-types: [ "version-update:semver-major" ]
-  - package-ecosystem: "pip"
-    directory: "/python/helpers"
-    schedule:
-      interval: "daily"
-    groups:
-      common:
-        patterns:
-          - pip
-          - cython
-          - flake8
-      poetry:
-        patterns:
-          - poetry
-          - hashin
-      pip-tools:
-        patterns:
-          - pip-tools
-      pipenv:
-        patterns:
-          - pipfile
-          - pipenv
-  - package-ecosystem: "pub"
-    directory: "/pub/helpers"
-    schedule:
-      interval: "daily"
-  - package-ecosystem: "nuget"
-    directory: "/nuget/helpers/lib/NuGetUpdater"
-    schedule:
-      interval: "daily"
-  - package-ecosystem: "dotnet-sdk"
-    directory: "/nuget/helpers/lib/NuGetUpdater"
-    schedule:
-      interval: "daily"
+  # Git Submodule Updates
   - package-ecosystem: "gitsubmodule"
     directory: "/"
     schedule:
       interval: "daily"
-
-  - package-ecosystem: "gitsubmodule"
-    directory: "/"
-    schedule:
-      interval: "daily"
+      time: "06:00"
+      timezone: "UTC"
     target-branch: "develop"
+    commit-message:
+      prefix: "[GitSubmodule]"
+    open-pull-requests-limit: 5
+    automerge: false
 
+  # GitHub Actions Updates
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "daily"
+      time: "07:00"
+      timezone: "UTC"
     target-branch: "develop"
+    commit-message:
+      prefix: "[GH-Actions]"
+    open-pull-requests-limit: 5
+    automerge: true
+    automerge-strategy: "merge"
 
+  # Docker Updates (Root Directory)
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "08:00"
+      timezone: "UTC"
+    commit-message:
+      prefix: "[Docker]"
+    open-pull-requests-limit: 3
+    automerge: false
+
+  # Docker Updates (Build Directory)
   - package-ecosystem: "docker"
     directory: "/build"
     schedule:
       interval: "daily"
+      time: "09:00"
+      timezone: "UTC"
     target-branch: "develop"
+    commit-message:
+      prefix: "[Docker]"
+    open-pull-requests-limit: 3
+    automerge: false
 
+  # Go Modules Updates
   - package-ecosystem: "gomod"
     directory: "/build"
     schedule:
       interval: "daily"
+      time: "10:00"
+      timezone: "UTC"
     target-branch: "develop"
+    commit-message:
+      prefix: "[GoMod]"
+    open-pull-requests-limit: 5
+    automerge: false
 
+  # Maven Updates (Root Directory)
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "11:00"
+      timezone: "UTC"
+    commit-message:
+      prefix: "[Maven]"
+    open-pull-requests-limit: 2
+    automerge: false
+
+  # Maven Updates (Build Directory)
   - package-ecosystem: "maven"
     directory: "/build"
     schedule:
       interval: "daily"
+      time: "12:00"
+      timezone: "UTC"
     target-branch: "develop"
+    commit-message:
+      prefix: "[Maven]"
+    open-pull-requests-limit: 5
+    automerge: false
 
+  # NPM Updates
   - package-ecosystem: "npm"
     directory: "/build"
     schedule:
       interval: "daily"
+      time: "13:00"
+      timezone: "UTC"
     target-branch: "develop"
+    commit-message:
+      prefix: "[NPM]"
+    open-pull-requests-limit: 5
+    automerge: true
+    automerge-strategy: "squash"
 
+  # Python (Pip) Updates
   - package-ecosystem: "pip"
     directory: "/build/python"
     schedule:
       interval: "daily"
+      time: "14:00"
+      timezone: "UTC"
     target-branch: "develop"
+    commit-message:
+      prefix: "[Python]"
+    open-pull-requests-limit: 5
+    automerge: false
+
+  # Ruby Gems Updates
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "15:00"
+      timezone: "UTC"
+    commit-message:
+      prefix: "[Ruby]"
+    open-pull-requests-limit: 5
+    automerge: true
+    automerge-strategy: "squash"
+
+  # NuGet Updates
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "16:00"
+      timezone: "UTC"
+    commit-message:
+      prefix: "[NuGet]"
+    open-pull-requests-limit: 5
+    automerge: false
+
+  # Global Default Configurations
+  automerge: true
+  pull-request-branch-name:
+    separator: "-"
+  rebase-strategy: "auto"
+  commit-message:
+    include: "details-and-summary"
