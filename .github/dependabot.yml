@@ -2,48 +2,6 @@
 version: 2
 updates:
 
-  - package-ecosystem: "gitsubmodule"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    target-branch: "develop"
-
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    target-branch: "develop"
-
-  - package-ecosystem: "docker"
-    directory: "/build"
-    schedule:
-      interval: "daily"
-    target-branch: "develop"
-
-  - package-ecosystem: "gomod"
-    directory: "/build"
-    schedule:
-      interval: "daily"
-    target-branch: "develop"
-
-  - package-ecosystem: "maven"
-    directory: "/build"
-    schedule:
-      interval: "daily"
-    target-branch: "develop"
-
-  - package-ecosystem: "npm"
-    directory: "/build"
-    schedule:
-      interval: "daily"
-    target-branch: "develop"
-
-  - package-ecosystem: "pip"
-    directory: "/build/python"
-    schedule:
-      interval: "daily"
-    target-branch: "develop"
-
   - package-ecosystem: "bundler"
     directories:
       - "/updater"
@@ -178,3 +136,45 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    target-branch: "develop"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    target-branch: "develop"
+
+  - package-ecosystem: "docker"
+    directory: "/build"
+    schedule:
+      interval: "daily"
+    target-branch: "develop"
+
+  - package-ecosystem: "gomod"
+    directory: "/build"
+    schedule:
+      interval: "daily"
+    target-branch: "develop"
+
+  - package-ecosystem: "maven"
+    directory: "/build"
+    schedule:
+      interval: "daily"
+    target-branch: "develop"
+
+  - package-ecosystem: "npm"
+    directory: "/build"
+    schedule:
+      interval: "daily"
+    target-branch: "develop"
+
+  - package-ecosystem: "pip"
+    directory: "/build/python"
+    schedule:
+      interval: "daily"
+    target-branch: "develop"
