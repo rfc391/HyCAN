@@ -1,7 +1,6 @@
 version: 2
 updates:
-  # Git Submodule Updates
-  - package-ecosystem: "gitsubmodule"
+  - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "daily"
@@ -9,12 +8,15 @@ updates:
       timezone: "UTC"
     target-branch: "develop"
     commit-message:
-      prefix: "[GitSubmodule]"
-    open-pull-requests-limit: 5
-    automerge: false
+      prefix: "[GH-Actions]"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "github-actions"
+    automerge: true
+    automerge-strategy: "merge"
 
-  # GitHub Actions Updates
-  - package-ecosystem: "github-actions"
+  - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "daily"
@@ -22,130 +24,41 @@ updates:
       timezone: "UTC"
     target-branch: "develop"
     commit-message:
-      prefix: "[GH-Actions]"
-    open-pull-requests-limit: 5
+      prefix: "[Python]"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "python"
     automerge: true
     automerge-strategy: "merge"
 
-  # Docker Updates (Root Directory)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "08:00"
+      timezone: "UTC"
+    target-branch: "develop"
+    commit-message:
+      prefix: "[NPM]"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "npm"
+    automerge: true
+    automerge-strategy: "squash"
+
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
       interval: "weekly"
-      time: "08:00"
-      timezone: "UTC"
-    commit-message:
-      prefix: "[Docker]"
-    open-pull-requests-limit: 3
-    automerge: false
-
-  # Docker Updates (Build Directory)
-  - package-ecosystem: "docker"
-    directory: "/build"
-    schedule:
-      interval: "daily"
       time: "09:00"
       timezone: "UTC"
     target-branch: "develop"
     commit-message:
       prefix: "[Docker]"
-    open-pull-requests-limit: 3
-    automerge: false
-
-  # Go Modules Updates
-  - package-ecosystem: "gomod"
-    directory: "/build"
-    schedule:
-      interval: "daily"
-      time: "10:00"
-      timezone: "UTC"
-    target-branch: "develop"
-    commit-message:
-      prefix: "[GoMod]"
     open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "docker"
     automerge: false
-
-  # Maven Updates (Root Directory)
-  - package-ecosystem: "maven"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      time: "11:00"
-      timezone: "UTC"
-    commit-message:
-      prefix: "[Maven]"
-    open-pull-requests-limit: 2
-    automerge: false
-
-  # Maven Updates (Build Directory)
-  - package-ecosystem: "maven"
-    directory: "/build"
-    schedule:
-      interval: "daily"
-      time: "12:00"
-      timezone: "UTC"
-    target-branch: "develop"
-    commit-message:
-      prefix: "[Maven]"
-    open-pull-requests-limit: 5
-    automerge: false
-
-  # NPM Updates
-  - package-ecosystem: "npm"
-    directory: "/build"
-    schedule:
-      interval: "daily"
-      time: "13:00"
-      timezone: "UTC"
-    target-branch: "develop"
-    commit-message:
-      prefix: "[NPM]"
-    open-pull-requests-limit: 5
-    automerge: true
-    automerge-strategy: "squash"
-
-  # Python (Pip) Updates
-  - package-ecosystem: "pip"
-    directory: "/build/python"
-    schedule:
-      interval: "daily"
-      time: "14:00"
-      timezone: "UTC"
-    target-branch: "develop"
-    commit-message:
-      prefix: "[Python]"
-    open-pull-requests-limit: 5
-    automerge: false
-
-  # Ruby Gems Updates
-  - package-ecosystem: "bundler"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      time: "15:00"
-      timezone: "UTC"
-    commit-message:
-      prefix: "[Ruby]"
-    open-pull-requests-limit: 5
-    automerge: true
-    automerge-strategy: "squash"
-
-  # NuGet Updates
-  - package-ecosystem: "nuget"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      time: "16:00"
-      timezone: "UTC"
-    commit-message:
-      prefix: "[NuGet]"
-    open-pull-requests-limit: 5
-    automerge: false
-
-  # Global Default Configurations
-  automerge: true
-  pull-request-branch-name:
-    separator: "-"
-  rebase-strategy: "auto"
-  commit-message:
-    include: "details-and-summary"
