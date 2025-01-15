@@ -25,7 +25,7 @@ HyCAN is an open-source initiative driving innovation in clean hydrogen energy. 
 ### Local Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-organization>/HyCAN.git
+   git clone https://github.com/rfc391/HyCAN.git
    ```
 2. Navigate to the project directory:
    ```bash
