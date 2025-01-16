@@ -1,0 +1,16 @@
+
+syntax = "proto3";
+
+service CatalystService {
+  rpc PredictBehavior (CatalystRequest) returns (CatalystResponse);
+}
+
+message CatalystRequest {
+  string catalyst_type = 1;
+  repeated double parameters = 2;
+}
+
+message CatalystResponse {
+  string status = 1;
+  double efficiency = 2;
+}

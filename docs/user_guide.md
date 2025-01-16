@@ -1,41 +1,52 @@
 
-# User Guide
+# HyCAN User Documentation
 
 ## Overview
+HyCAN is a modular framework designed for optimizing hydrogen production and nanomaterial synthesis. This document provides a comprehensive guide to deploying, configuring, and using HyCAN.
 
-This guide helps users set up and operate the HyCAN platform effectively.
-
+## Setup
 ### Prerequisites
+- Docker and Docker Compose installed.
+- Python 3.9 or higher.
+- Access to IPFS and PostgreSQL instances.
 
-- Python 3.8 or higher.
-- Recommended: Docker (for containerized deployment).
-
-### Installation
-
+### Deployment
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/HyCAN-main.git
-   cd HyCAN-main
+   git clone https://github.com/rfc391/HyCAN.git
+   cd HyCAN
    ```
-
-2. Set up a virtual environment and activate it:
+2. Build and deploy the Catalyst Service:
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate
+   cd services
+   docker build -t catalyst_service .
+   docker run -p 50051:50051 catalyst_service
    ```
 
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Configuration
+### PostgreSQL
+- Update `config/postgres_config.ini` with your database credentials.
+- Ensure the database is running and accessible.
 
-### Running the Application
+### Cloudflare D1
+- Update `config/cloudflare_d1_config.ini` with your Cloudflare account details.
 
-- Start the main app:
-  ```bash
-  python main.py
-  ```
+### IPFS
+- Ensure the IPFS node is running locally or remotely.
+- Update `config/ipfs_config.ini` with the IPFS API URL.
 
-- Access the dashboard (if enabled):
-  Open your browser and navigate to `http://localhost:8000`.
+## Usage
+1. Access the Catalyst Service via gRPC on port `50051`.
+2. Use provided gRPC clients or tools like `grpcurl` to interact with the service.
+
+## AI Integration
+- Place a pre-trained model file (`model.pkl`) in the `services` directory for AI-based predictions.
+- The model should accept input as a list of parameters and return efficiency as output.
+
+## ISO 9001 Compliance
+HyCAN adheres to ISO 9001 standards by documenting workflows, ensuring traceability, and following quality management principles.
+
+## Troubleshooting
+- Verify all services are running using `docker ps`.
+- Check logs for errors: `docker logs <container_id>`.
 
