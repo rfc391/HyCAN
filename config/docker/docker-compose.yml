@@ -1,0 +1,73 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: hycan_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: hycan
+      POSTGRES_PASSWORD: changeme
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  redis:
+    image: redis:alpine
+    container_name: hycan_redis
+    restart: unless-stopped
+    networks:
+      - internal
+
+  backend:
+    build:
+      context: ../../services
+    container_name: hycan_backend
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - ENV=production
+    networks:
+      - internal
+
+  frontend:
+    image: nginx:alpine
+    container_name: hycan_frontend
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ../../frontend:/usr/share/nginx/html:ro
+    networks:
+      - internal
+
+  grafana:
+    image: grafana/grafana
+    container_name: hycan_grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+    networks:
+      - internal
+
+  prometheus:
+    image: prom/prometheus
+    container_name: hycan_prometheus
+    restart: unless-stopped
+    volumes:
+      - ../../config/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - internal
+
+volumes:
+  pgdata:
+  grafana_data:
+
+networks:
+  internal:
+    driver: bridge

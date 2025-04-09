@@ -1,0 +1,23 @@
+
+site_name: HyCAN
+site_url: https://rfc391.github.io/HyCAN/
+repo_url: https://github.com/rfc391/HyCAN
+edit_uri: edit/main/docs/
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - content.code.copy
+    - content.tabs.link
+    - navigation.instant
+nav:
+  - Home: index.md
+  - Getting Started: getting_started.md
+  - Quick Start: quick_start.md
+  - User Guide: user_guide.md
+  - Developer Guide: developer_guide.md
+  - Bioinformatics: bioinformatics.md
+  - Dashboards: interactive_dashboard_tutorial.md
+  - Quizzes: interactive_quizzes.md
+  - Contributing: CONTRIBUTING.md
